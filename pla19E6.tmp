@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl3bbsm887xy"]
+
+[ext_resource type="Script" path="res://mouselook_simple.gd" id="1_knqbr"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hh85d"]
+
+[node name="Player" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979714, 0)
+mesh = SubResource("CapsuleMesh_hh85d")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88375, 0)
+script = ExtResource("1_knqbr")
+sensitivity = null
+invert_y = null
+min_vertical_angle = null
+max_vertical_angle = null
